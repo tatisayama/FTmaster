@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <title>Compliance | Facility Techmaster Engenharia</title>
+  <meta name="description" content="Políticas de Compliance, Código de Ética e Conduta e Política de Conflito de Interesses da Facility Techmaster Engenharia.">
+  <link rel="canonical" href="https://ftmaster.com.br/compliance">
+  <meta property="og:title" content="Compliance | Facility Techmaster Engenharia">
+  <meta property="og:description" content="Transparência e integridade são pilares da FTmaster. Conheça nossas políticas de compliance, ética e conduta.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ── Compliance-specific styles ── */
+    .compliance-hero-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-xl);
+      margin-top: var(--space-3xl);
+      position: relative;
+      z-index: 2;
+    }
+
+    .pillar-card {
+      background: rgba(0, 212, 170, 0.06);
+      border: 1px solid rgba(0, 212, 170, 0.2);
+      border-radius: var(--radius-md);
+      padding: var(--space-xl);
+      text-align: center;
+      transition: all var(--transition-base);
+    }
+
+    .pillar-card:hover {
+      background: rgba(0, 212, 170, 0.12);
+      transform: translateY(-4px);
+    }
+
+    .pillar-card__icon {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto var(--space-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 212, 170, 0.15);
+      border-radius: var(--radius-full);
+    }
+
+    .pillar-card__icon svg {
+      width: 28px;
+      height: 28px;
+      stroke: var(--primary);
+      fill: none;
+      stroke-width: 1.8;
+    }
+
+    .pillar-card h3 {
+      font-size: var(--fs-base);
+      color: var(--text-light);
+      margin-bottom: var(--space-sm);
+    }
+
+    .pillar-card p {
+      font-size: var(--fs-sm);
+      color: var(--text-light-muted);
+      margin: 0;
+    }
+
+    /* ── Document cards ── */
+    .doc-section {
+      padding: var(--space-5xl) 0;
+    }
+
+    .doc-section:nth-child(even) {
+      background: var(--surface-light);
+    }
+
+    .doc-section:nth-child(odd) {
+      background: white;
+    }
+
+    .doc-header {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-2xl);
+      margin-bottom: var(--space-3xl);
+    }
+
+    .doc-header__number {
+      flex-shrink: 0;
+      width: 64px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--gradient-primary);
+      border-radius: var(--radius-md);
+      font-family: var(--font-heading);
+      font-size: var(--fs-2xl);
+      font-weight: 800;
+      color: var(--secondary-dark);
+    }
+
+    .doc-header__text h2 {
+      color: var(--text-primary);
+      margin-bottom: var(--space-sm);
+    }
+
+    .doc-header__text p {
+      color: var(--text-secondary);
+      font-size: var(--fs-md);
+      margin: 0;
+    }
+
+    .doc-body {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: var(--space-3xl);
+      align-items: start;
+    }
+
+    .doc-content h3 {
+      font-size: var(--fs-lg);
+      color: var(--text-primary);
+      margin: var(--space-2xl) 0 var(--space-lg);
+      padding-bottom: var(--space-sm);
+      border-bottom: 2px solid rgba(0, 212, 170, 0.2);
+    }
+
+    .doc-content h3:first-child {
+      margin-top: 0;
+    }
+
+    .doc-content p {
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: var(--space-lg);
+    }
+
+    .doc-list {
+      list-style: none;
+      margin: 0 0 var(--space-xl);
+      padding: 0;
+      display: grid;
+      gap: var(--space-md);
+    }
+
+    .doc-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-md);
+      color: var(--text-secondary);
+      font-size: var(--fs-sm);
+      line-height: 1.6;
+    }
+
+    .doc-list li::before {
+      content: '';
+      flex-shrink: 0;
+      width: 8px;
+      height: 8px;
+      margin-top: 6px;
+      border-radius: 50%;
+      background: var(--gradient-primary);
+    }
+
+    .doc-aside {
+      position: sticky;
+      top: calc(var(--navbar-height) + var(--space-xl));
+    }
+
+    .doc-download-card {
+      background: white;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: var(--space-2xl);
+      box-shadow: var(--shadow-md);
+      text-align: center;
+    }
+
+    .doc-download-card__icon {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto var(--space-xl);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 212, 170, 0.08);
+      border-radius: var(--radius-md);
+    }
+
+    .doc-download-card__icon svg {
+      width: 36px;
+      height: 36px;
+      stroke: var(--primary);
+      fill: none;
+      stroke-width: 1.5;
+    }
+
+    .doc-download-card h4 {
+      font-size: var(--fs-base);
+      color: var(--text-primary);
+      margin-bottom: var(--space-sm);
+    }
+
+    .doc-download-card p {
+      font-size: var(--fs-sm);
+      color: var(--text-secondary);
+      margin-bottom: var(--space-xl);
+    }
+
+    .doc-download-card .btn {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .doc-meta {
+      margin-top: var(--space-lg);
+      padding-top: var(--space-lg);
+      border-top: 1px solid var(--border-light);
+      font-size: var(--fs-xs);
+      color: var(--text-secondary);
+      text-align: left;
+    }
+
+    .doc-meta span {
+      display: block;
+      padding: var(--space-xs) 0;
+    }
+
+    .doc-meta strong {
+      color: var(--text-primary);
+    }
+
+    /* ── Canal de Denúncia ── */
+    .canal-section {
+      background: var(--gradient-hero);
+      padding: var(--space-5xl) 0;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .canal-section h2 {
+      color: var(--text-light);
+      margin-bottom: var(--space-lg);
+      position: relative;
+      z-index: 2;
+    }
+
+    .canal-section p {
+      color: var(--text-light-muted);
+      font-size: var(--fs-lg);
+      max-width: 600px;
+      margin: 0 auto var(--space-2xl);
+      position: relative;
+      z-index: 2;
+    }
+
+    .canal-section .canal-actions {
+      display: flex;
+      gap: var(--space-lg);
+      justify-content: center;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 2;
+    }
+
+    .canal-info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-xl);
+      margin-top: var(--space-3xl);
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .canal-info-item {
+      background: rgba(0, 212, 170, 0.08);
+      border: 1px solid rgba(0, 212, 170, 0.15);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+    }
+
+    .canal-info-item h4 {
+      color: var(--primary);
+      font-size: var(--fs-sm);
+      margin-bottom: var(--space-xs);
+    }
+
+    .canal-info-item p {
+      color: var(--text-light-muted);
+      font-size: var(--fs-sm);
+      margin: 0;
+    }
+
+    @media (max-width: 900px) {
+      .compliance-hero-pillars { grid-template-columns: 1fr; }
+      .doc-body { grid-template-columns: 1fr; }
+      .doc-aside { position: static; }
+      .canal-info-grid { grid-template-columns: 1fr; }
+      .doc-header { flex-direction: column; gap: var(--space-lg); }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar__logo" aria-label="FTmaster - Home">
+        <img src="assets/logo.png" alt="Logo FTmaster" width="55" height="55">
+        <span class="navbar__logo-text">FT<span>master</span></span>
+      </a>
+      <ul class="navbar__menu" id="nav-menu">
+        <li><a href="index.html" class="navbar__link">Home</a></li>
+        <li><a href="sobre.html" class="navbar__link">Sobre Nós</a></li>
+        <li><a href="servicos.html" class="navbar__link">Serviços</a></li>
+        <li><a href="compliance.html" class="navbar__link active">Compliance</a></li>
+        <li><a href="contato.html" class="navbar__link">Contato</a></li>
+        <li><a href="contato.html" class="btn btn--primary btn--sm navbar__cta">Solicite um Orçamento</a></li>
+      </ul>
+      <div class="navbar__hamburger" id="hamburger" aria-label="Menu" role="button" tabindex="0"><span></span><span></span><span></span></div>
+    </div>
+    <div class="navbar__overlay" id="nav-overlay"></div>
+  </nav>
+
+  <!-- ── Hero ── -->
+  <section class="page-hero">
+    <div class="page-hero__bg">
+      <div class="hero__bg-circle hero__bg-circle--1"></div>
+      <div class="hero__bg-circle hero__bg-circle--2"></div>
+      <div class="hero__grid-lines"></div>
+    </div>
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a><span>/</span><span>Compliance</span>
+      </nav>
+      <h1>Transparência &amp; <span class="text-gradient">Integridade</span></h1>
+      <p>Nossa atuação é guiada por princípios éticos sólidos, conformidade regulatória e responsabilidade com todos os nossos parceiros e colaboradores.</p>
+
+      <div class="compliance-hero-pillars">
+        <div class="pillar-card">
+          <div class="pillar-card__icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Compliance</h3>
+          <p>Conformidade com leis, normas e regulamentos que regem nossa atividade</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-card__icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <h3>Ética e Conduta</h3>
+          <p>Valores que orientam o comportamento de todos os nossos colaboradores</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-card__icon">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Conflito de Interesses</h3>
+          <p>Diretrizes para identificação, declaração e gestão de conflitos</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       DOCUMENTO 1 — POLÍTICA DE COMPLIANCE
+  ════════════════════════════════════════ -->
+  <section class="doc-section" id="compliance">
+    <div class="container">
+
+      <div class="doc-header reveal">
+        <div class="doc-header__number">01</div>
+        <div class="doc-header__text">
+          <h2>Política de <span class="text-gradient">Compliance</span></h2>
+          <p>Diretrizes para garantir a conformidade legal, regulatória e ética em todas as operações da Facility Techmaster Engenharia.</p>
+        </div>
+      </div>
+
+      <div class="doc-body">
+        <div class="doc-content reveal reveal--left">
+
+          <h3>Objetivo</h3>
+          <p>A Política de Compliance da Facility Techmaster Engenharia tem como objetivo estabelecer diretrizes, responsabilidades e procedimentos para garantir que todas as atividades da empresa estejam em conformidade com as leis vigentes, regulamentos aplicáveis e padrões éticos reconhecidos no mercado.</p>
+
+          <h3>Âmbito de Aplicação</h3>
+          <p>Esta política aplica-se a todos os colaboradores, prestadores de serviço, representantes e parceiros comerciais que atuem em nome da FTmaster, em qualquer nível hierárquico ou modalidade de contratação.</p>
+
+          <h3>Princípios Fundamentais</h3>
+          <ul class="doc-list">
+            <li>Conformidade com a legislação brasileira vigente, incluindo a Lei Anticorrupção (Lei nº 12.846/2013)</li>
+            <li>Transparência nas relações com clientes, fornecedores e parceiros públicos e privados</li>
+            <li>Integridade em todas as transações financeiras e comerciais</li>
+            <li>Responsabilidade individual de cada colaborador no cumprimento das normas</li>
+            <li>Melhoria contínua dos processos e controles internos de compliance</li>
+            <li>Prevenção e combate à lavagem de dinheiro e ao financiamento do terrorismo</li>
+          </ul>
+
+          <h3>Controles Internos</h3>
+          <p>A empresa mantém controles internos estruturados para monitorar e garantir a conformidade, incluindo programas de treinamento periódico, auditorias internas, procedimentos de due diligence para novos parceiros e fornecedores, e revisão periódica das políticas.</p>
+
+          <h3>Responsabilidades</h3>
+          <ul class="doc-list">
+            <li>A Alta Direção é responsável por promover e priorizar a cultura de compliance</li>
+            <li>Cada gestor deve garantir que sua equipe conheça e cumpra as diretrizes vigentes</li>
+            <li>Todo colaborador deve reportar imediatamente qualquer suspeita de desvio ou irregularidade</li>
+            <li>Nenhuma represália será tolerada contra quem relatar, de boa-fé, suspeita de violação</li>
+          </ul>
+
+          <h3>Sanções e Consequências</h3>
+          <p>O descumprimento desta política está sujeito a medidas disciplinares, podendo incluir advertência, suspensão ou desligamento, além de responsabilização civil e criminal nos termos da legislação aplicável.</p>
+
+        </div>
+
+        <div class="doc-aside reveal reveal--right">
+          <div class="doc-download-card">
+            <div class="doc-download-card__icon">
+              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <h4>Política de Compliance</h4>
+            <p>Documento oficial completo em formato PDF</p>
+            <a href="assets/politica-compliance.pdf" download class="btn btn--primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Baixar PDF
+            </a>
+            <div class="doc-meta">
+              <span><strong>Empresa:</strong> Facility Techmaster Engenharia</span>
+              <span><strong>Vigência:</strong> 2026</span>
+              <span><strong>Revisão:</strong> Anual</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       DOCUMENTO 2 — CÓDIGO DE ÉTICA E CONDUTA
+  ════════════════════════════════════════ -->
+  <section class="doc-section" id="etica">
+    <div class="container">
+
+      <div class="doc-header reveal">
+        <div class="doc-header__number">02</div>
+        <div class="doc-header__text">
+          <h2>Código de <span class="text-gradient">Ética e Conduta</span></h2>
+          <p>Os valores e comportamentos esperados de todos que integram ou representam a Facility Techmaster Engenharia.</p>
+        </div>
+      </div>
+
+      <div class="doc-body">
+        <div class="doc-content reveal reveal--left">
+
+          <h3>Nossa Missão Ética</h3>
+          <p>A FTmaster acredita que o sucesso sustentável só é possível por meio de relações pautadas pela honestidade, respeito e responsabilidade. O Código de Ética e Conduta é o instrumento que traduz esses valores em comportamentos concretos esperados de todos os que fazem parte da nossa organização.</p>
+
+          <h3>Valores que nos Guiam</h3>
+          <ul class="doc-list">
+            <li><strong>Integridade:</strong> agir com honestidade e coerência, independente de quem está observando</li>
+            <li><strong>Respeito:</strong> tratar a todos com dignidade, sem discriminação de qualquer natureza</li>
+            <li><strong>Responsabilidade:</strong> assumir compromissos e cumpri-los com excelência</li>
+            <li><strong>Transparência:</strong> comunicar-se com clareza e disponibilizar informações relevantes</li>
+            <li><strong>Segurança:</strong> priorizar a saúde e integridade física de colaboradores e clientes</li>
+          </ul>
+
+          <h3>Relacionamento com Clientes e Parceiros</h3>
+          <p>Todos os colaboradores devem manter postura profissional e ética no relacionamento com clientes, fornecedores e parceiros, evitando promessas que não possam ser cumpridas, situações de assédio ou pressão indevida, e qualquer conduta que possa comprometer a imagem da empresa.</p>
+
+          <h3>Ambiente de Trabalho</h3>
+          <ul class="doc-list">
+            <li>Proibição de qualquer forma de assédio moral ou sexual</li>
+            <li>Respeito à diversidade e inclusão de todos os colaboradores</li>
+            <li>Manutenção de ambiente seguro, saudável e motivador</li>
+            <li>Vedação ao uso de substâncias que comprometam o desempenho profissional</li>
+          </ul>
+
+          <h3>Uso de Recursos e Informações</h3>
+          <p>Os recursos, equipamentos e informações da empresa devem ser utilizados exclusivamente para fins profissionais. A proteção de dados confidenciais — de clientes, parceiros e da própria organização — é obrigação de todos os colaboradores, estendendo-se após o encerramento do vínculo.</p>
+
+          <h3>Meios de Comunicação e Redes Sociais</h3>
+          <p>Colaboradores devem agir com responsabilidade ao se manifestar publicamente sobre assuntos relacionados à empresa, clientes ou ao setor, preservando a reputação institucional e respeitando acordos de confidencialidade.</p>
+
+        </div>
+
+        <div class="doc-aside reveal reveal--right">
+          <div class="doc-download-card">
+            <div class="doc-download-card__icon">
+              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <h4>Código de Ética e Conduta</h4>
+            <p>Documento oficial completo em formato PDF</p>
+            <a href="assets/codigo-etica-conduta.pdf" download class="btn btn--primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Baixar PDF
+            </a>
+            <div class="doc-meta">
+              <span><strong>Empresa:</strong> Facility Techmaster Engenharia</span>
+              <span><strong>Vigência:</strong> 2026</span>
+              <span><strong>Revisão:</strong> Anual</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       DOCUMENTO 3 — CONFLITO DE INTERESSES
+  ════════════════════════════════════════ -->
+  <section class="doc-section" id="conflito">
+    <div class="container">
+
+      <div class="doc-header reveal">
+        <div class="doc-header__number">03</div>
+        <div class="doc-header__text">
+          <h2>Política de <span class="text-gradient">Conflito de Interesses</span></h2>
+          <p>Procedimentos para identificação, declaração e gestão de situações que possam representar conflito de interesses na atuação profissional.</p>
+        </div>
+      </div>
+
+      <div class="doc-body">
+        <div class="doc-content reveal reveal--left">
+
+          <h3>O que é Conflito de Interesses</h3>
+          <p>Ocorre conflito de interesses quando um colaborador — em razão de interesses pessoais, familiares ou financeiros — possa ser influenciado a agir de forma contrária aos interesses legítimos da FTmaster, de seus clientes ou parceiros. Essas situações devem ser identificadas e declaradas, mesmo quando há apenas aparência de conflito.</p>
+
+          <h3>Situações que Configuram Conflito</h3>
+          <ul class="doc-list">
+            <li>Possuir participação societária em empresa concorrente, fornecedora ou cliente da FTmaster</li>
+            <li>Receber presentes, vantagens ou benefícios de parceiros além dos valores permitidos pela política</li>
+            <li>Contratar ou indicar para contratação familiares ou pessoas próximas sem o processo formal adequado</li>
+            <li>Exercer atividade profissional paralela que concorra com os interesses da empresa</li>
+            <li>Utilizar informações privilegiadas para benefício próprio ou de terceiros</li>
+            <li>Participar de decisão que envolva interesse pessoal, direto ou indireto</li>
+          </ul>
+
+          <h3>Procedimento de Declaração</h3>
+          <p>Todo colaborador que identificar potencial conflito de interesses — seja real, potencial ou aparente — deve comunicar imediatamente ao seu gestor direto e ao responsável pelo compliance, por escrito, descrevendo a situação. A empresa analisará cada caso de forma confidencial e imparcial.</p>
+
+          <h3>Recebimento de Presentes e Hospitalidade</h3>
+          <ul class="doc-list">
+            <li>É vedado solicitar brindes, presentes ou vantagens de qualquer natureza a fornecedores e parceiros</li>
+            <li>Presentes de cortesia de baixo valor (até R$ 100,00) podem ser aceitos e devem ser comunicados</li>
+            <li>Convites para eventos, viagens ou entretenimento deverão ser aprovados previamente pela liderança</li>
+            <li>Qualquer recebimento acima dos limites permitidos deve ser recusado ou devolvido</li>
+          </ul>
+
+          <h3>Atividades Externas</h3>
+          <p>O exercício de atividades profissionais externas (consultorias, cargos em outras empresas, etc.) deve ser previamente comunicado e autorizado, desde que não represente concorrência ou conflito com as atividades da FTmaster.</p>
+
+          <h3>Consequências do Não Cumprimento</h3>
+          <p>A omissão ou falsa declaração de situação de conflito de interesses será tratada como falta grave, sujeitando o colaborador a medidas disciplinares, incluindo desligamento e, quando aplicável, responsabilização legal.</p>
+
+        </div>
+
+        <div class="doc-aside reveal reveal--right">
+          <div class="doc-download-card">
+            <div class="doc-download-card__icon">
+              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <h4>Política de Conflito de Interesses</h4>
+            <p>Documento oficial completo em formato PDF</p>
+            <a href="assets/politica-conflito-interesses.pdf" download class="btn btn--primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Baixar PDF
+            </a>
+            <div class="doc-meta">
+              <span><strong>Empresa:</strong> Facility Techmaster Engenharia</span>
+              <span><strong>Vigência:</strong> 2026</span>
+              <span><strong>Revisão:</strong> Anual</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Canal de Denúncias ── -->
+  <section class="canal-section">
+    <div class="hero__bg-circle hero__bg-circle--1"></div>
+    <div class="hero__bg-circle hero__bg-circle--2"></div>
+    <div class="hero__grid-lines"></div>
+    <div class="container">
+      <h2>Canal de <span class="text-gradient">Denúncias</span></h2>
+      <p>Qualquer colaborador, cliente ou parceiro pode reportar suspeitas de violação às nossas políticas. Todas as comunicações são tratadas com confidencialidade e sem represálias.</p>
+      <div class="canal-actions">
+        <a href="contato.html" class="btn btn--primary btn--lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Reportar por E-mail
+        </a>
+        <a href="https://wa.me/5511000000000?text=Ol%C3%A1!%20Gostaria%20de%20reportar%20uma%20situa%C3%A7%C3%A3o%20de%20forma%20confidencial." target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--lg" style="border-color:rgba(255,255,255,0.4);color:white">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Reportar via WhatsApp
+        </a>
+      </div>
+      <div class="canal-info-grid">
+        <div class="canal-info-item">
+          <h4>🔒 Confidencial</h4>
+          <p>Sua identidade é protegida em todo o processo</p>
+        </div>
+        <div class="canal-info-item">
+          <h4>🚫 Sem Represálias</h4>
+          <p>Garantimos proteção a quem reporta de boa-fé</p>
+        </div>
+        <div class="canal-info-item">
+          <h4>⏱ Resposta Ágil</h4>
+          <p>Todas as denúncias são apuradas em até 10 dias</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand__logo">
+            <img src="assets/logo.png" alt="Logo FTmaster" width="45" height="45">
+            <span class="navbar__logo-text">FT<span>master</span></span>
+          </div>
+          <p>Soluções completas em facilities e engenharia para postos de combustível.</p>
+        </div>
+        <div class="footer-column"><h4>Navegação</h4><a href="index.html">Home</a><a href="sobre.html">Sobre Nós</a><a href="servicos.html">Serviços</a><a href="compliance.html">Compliance</a><a href="contato.html">Contato</a></div>
+        <div class="footer-column"><h4>Serviços</h4><a href="servicos.html#manutencao">Manutenção Predial</a><a href="servicos.html#engenharia">Engenharia & Reformas</a><a href="servicos.html#gestao">Gestão de Facilities</a><a href="servicos.html#conformidade">Conformidade & Laudos</a></div>
+        <div class="footer-column"><h4>Compliance</h4><a href="compliance.html#compliance">Política de Compliance</a><a href="compliance.html#etica">Código de Ética</a><a href="compliance.html#conflito">Conflito de Interesses</a></div>
+        <div class="footer-column"><h4>Contato</h4><a href="#">contato@ftmaster.com.br</a><a href="#">(11) 0000-0000</a><a href="#">São Paulo, SP</a></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Facility Techmaster Engenharia. Todos os direitos reservados.</p>
+        <p>CNPJ: 00.000.000/0001-00</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5511000000000?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="whatsapp-float__tooltip">Fale Conosco!</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
