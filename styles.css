@@ -944,11 +944,22 @@ ul { list-style: none; }
 .footer-copy { font-size: 0.68rem; color: var(--gray-700); }
 
 /* ════════════════════════════════════════════
+   RESPONSIVE GRID UTILITIES
+════════════════════════════════════════════ */
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+.grid-2-gap5 { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+.grid-sidebar { display: grid; grid-template-columns: 1fr 320px; gap: 4rem; align-items: start; }
+.grid-2-sub { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+
+/* ════════════════════════════════════════════
    RESPONSIVE
 ════════════════════════════════════════════ */
 @media (max-width: 960px) {
   .metrics-grid { grid-template-columns: repeat(2, 1fr); }
   .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .grid-sidebar { grid-template-columns: 1fr; gap: 2rem; }
+  .grid-2-gap5 { grid-template-columns: 1fr; gap: 2.5rem; }
 }
 @media (max-width: 768px) {
   .nav-links { display: none; }
@@ -958,6 +969,9 @@ ul { list-style: none; }
   .form-row { grid-template-columns: 1fr; }
   .footer-inner { flex-direction: column; text-align: center; gap: 0.8rem; }
   .footer-links { flex-wrap: wrap; justify-content: center; }
+  .grid-3 { grid-template-columns: 1fr; }
+  .grid-2 { grid-template-columns: 1fr; }
+  .grid-2-sub { grid-template-columns: 1fr; }
 }
 @media (max-width: 480px) {
   .hero-actions,
