@@ -3,6 +3,8 @@
 ## Projeto
 Site institucional B2B para empresa de facilities e engenharia voltada a postos de combustível. Cliente principal: Carrefour Postos.
 
+**Versão atual: v2** — Site completo com múltiplas páginas, área de compliance, dashboard e documentação institucional.
+
 ## Stack
 - HTML5 semântico
 - CSS3 vanilla (custom properties, grid, flexbox)
@@ -52,16 +54,57 @@ Site institucional B2B para empresa de facilities e engenharia voltada a postos 
 ## Estrutura de Arquivos
 ```
 FTmaster/
-├── index.html          # Home page
-├── sobre.html          # Sobre nós
-├── servicos.html       # Serviços
-├── contato.html        # Contato
-├── styles.css          # Design system + estilos
-├── script.js           # Interatividade
-├── claude.md           # Este arquivo
-└── assets/
-    └── logo.jpeg       # Logo da empresa
+├── index.html           # Home page
+├── solucoes.html        # Soluções/Serviços
+├── metodologia.html     # Metodologia de trabalho
+├── lideranca.html       # Liderança / Equipe
+├── compliance.html      # Compliance e políticas
+├── contato.html         # Contato
+├── dashboard.html       # Área do cliente (Dashboard)
+├── dashboard.css        # Estilos específicos do dashboard
+├── dashboard.js         # Lógica do dashboard
+├── styles.css           # Design system + estilos globais
+├── script.js            # Interatividade global
+├── claude.md            # Este arquivo de contexto
+├── assets/
+│   ├── logo.png                          # Logo PNG atual
+│   ├── codigo-etica-conduta.pdf          # Código de ética (download)
+│   ├── politica-compliance.pdf           # Política de compliance (download)
+│   └── politica-conflito-interesses.pdf  # Política de conflitos (download)
+├── docs/
+│   ├── Apresentação comercial FTmaster v2.pdf
+│   ├── CÓDIGO DE ÉTICA E CONDUTA.pdf
+│   ├── PLANO DE NEGÓCIOS — SERVIÇOS DE MANUTENÇÃO E REPAROS PARA VAREJO DE COMBUSTÍVEIS.pdf
+│   ├── POLÍTICA DE COMPLIANCE – FACILITY TECMASTER ENGENHARIA.pdf
+│   ├── POLÍTICA DE CONFLITO DE INTERESSES.pdf
+│   └── Relatório Estratégia Digital B2B Facilities.pdf
+└── _archive/            # Versões anteriores e protótipos
 ```
+
+## Páginas
+
+| Arquivo | Título | Descrição |
+|---|---|---|
+| `index.html` | Home | Hero, serviços resumidos, diferenciais, CTA |
+| `solucoes.html` | Soluções | Portfólio de serviços detalhados |
+| `metodologia.html` | Metodologia | Processo de trabalho e diferenciais técnicos |
+| `lideranca.html` | Liderança | Perfis da equipe de gestão |
+| `compliance.html` | Compliance | Código de ética, políticas e downloads |
+| `contato.html` | Contato | Formulário, telefone, localização |
+| `dashboard.html` | Área do Cliente | Dashboard com hierarquia de 4 níveis |
+
+## Dashboard — Área do Cliente
+- Hierarquia de 4 níveis: Admin → Gestor → Supervisor → Técnico
+- Visualização de SLAs, chamados e contratos
+- Arquivos separados: `dashboard.html`, `dashboard.css`, `dashboard.js`
+
+## Documentação Institucional (docs/)
+- Apresentação comercial v2
+- Plano de negócios
+- Código de ética e conduta
+- Política de compliance
+- Política de conflito de interesses
+- Relatório de estratégia digital B2B
 
 ## Público-alvo
 - Gerentes de postos de combustível
